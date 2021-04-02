@@ -1,22 +1,25 @@
 var lengthOfLongestSubstring = function(s) {
-    
-  let longestLength = 0
-  let substr = ""
-  let lastRepeatIndex = 0
   
+  let subStrConstructor = ""
+  let lengthOfLongestSubstr = 0
+
   for(let i = 0; i < s.length; i++){
-      console.log({substr},'current letter: ', s[i])
-      if(substr.includes(s[i])){
-          console.log(`includes: ${s[i]}`, {substr, i})
-          const newSubstr = s.slice(i)
-          substr = substr.length > newSubstr.length ? substr : newSubstr
-          console.log({newSubstr})
-      } else{
-          substr = substr + s[i]
-      }
+
+    const letterIsInSubStr = subStrConstructor.indexOf(s[i])
+    if(letterIsInSubStr !== -1){
+      // update the longest length if necessary
+      lengthOfLongestSubstr = subStrConstructor.length > lengthOfLongestSubstr ? subStrConstructor.length : lengthOfLongestSubstr
+      // remove all parts of the substring up until the first matched letter
+      subStrConstructor = subStrConstructor.slice(subStrConstructor.indexOf(s[i]) + 1)
+    }
+    subStrConstructor = subStrConstructor + s[i]
   }
-  console.log("final", {substr})
-  return substr.length
+
+  
+  lengthOfLongestSubstr = subStrConstructor.length > lengthOfLongestSubstr ? subStrConstructor.length : lengthOfLongestSubstr
+
+  return lengthOfLongestSubstr
+ 
 };
 
 
@@ -25,4 +28,5 @@ const test2 = "dvdf"
 const test3 = "dvxqwtzdabcefghi"
 const test4 = "lmnodvxqwtzdabcefghi"
 
-console.log(lengthOfLongestSubstring(test1))
+console.log(lengthOfLongestSubstring(test2))
+
