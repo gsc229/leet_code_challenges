@@ -20,4 +20,10 @@ const set4 = {
 }
 
 
-module.exports = { set1, set2, set3, set4 }
+const set5 = {
+  height: [1,7,5],
+  answer: 0
+}
+
+
+module.exports = { set1, set2, set3, set4, set5 }
