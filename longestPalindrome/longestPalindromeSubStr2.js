@@ -9,7 +9,9 @@ var longestPalindrome = function(s) {
     let right = 0
     let longest = ""
     console.log({s})
-    
+    let iterations = 0
+
+
     while(left < size - 1 && right < size){        
         const slice = s.slice(left, right + 1)
         const reversed = slice.split("").reverse().join("")
@@ -27,10 +29,10 @@ var longestPalindrome = function(s) {
             right++
         }
     
-        
+        iterations++
     }
   
-  console.log({longest})
+  console.log({longest, iterations})
   return longest
 
 };
