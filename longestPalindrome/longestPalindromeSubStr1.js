@@ -1,3 +1,5 @@
+const { set1, set2, set3 } = require('./test')
+
 var longestPalindrome = function(s) {
     
   if(s.length === 1){
@@ -29,4 +31,4 @@ const test1 = "babad"
 
 
 
-console.log(longestPalindrome(test1))
+console.log(longestPalindrome(set1.s))
