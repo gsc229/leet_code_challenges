@@ -30,5 +30,10 @@ const set6 = {
   answer: false
 }
 
+const set7 = {
+  a:"abcaa", b:"abcbb",
+  answer: false
+}
 
-module.exports = { set1, set2, set3, set4, set5, set6 }
+
+module.exports = { set1, set2, set3, set4, set5, set6, set7 }
