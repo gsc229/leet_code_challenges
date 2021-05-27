@@ -1,4 +1,4 @@
-const { set1, set2, set3, set4, set5, set6 } = require('./test')
+const { set1, set2, set3, set4, set5, set6, set7 } = require('./test')
 const colors = require('colors')
 
 
@@ -58,6 +58,10 @@ console.log({inputs: [set5.a, set5.b], result, answer: set5.answer}, correct)
 result = buddyStrings(set6.a, set6.b)
 correct = result === set6.answer ? "CORRECT".green : "WRONG".red 
 console.log({inputs: [set6.a, set6.b], result, answer: set6.answer}, correct)
+
+result = buddyStrings(set7.a, set7.b)
+correct = result === set7.answer ? "CORRECT".green : "WRONG".red 
+console.log({inputs: [set7.a, set7.b], result, answer: set7.answer}, correct)
 
 
 
