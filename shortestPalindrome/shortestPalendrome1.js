@@ -31,3 +31,4 @@ var shortestPalindrome = function(s) {
 const result = shortestPalindrome(set1.s)
 
 console.log({result, answer: set1.answer, correct: set1.answer === result})
+
